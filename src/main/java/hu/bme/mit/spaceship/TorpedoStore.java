@@ -28,11 +28,13 @@ public class TorpedoStore {
     }
   }
 
+  //Random ujrahasznalhato mostmar
   Random generator = new Random();
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
       throw new IllegalArgumentException("numberOfTorpedos");
+      //Hianyzo throw potlasa
     }
 
     boolean success = false;
@@ -43,6 +45,7 @@ public class TorpedoStore {
 
     if (r >= FAILURE_RATE) {
       // successful firing
+      //Hibas operatorhasznalat javitasa
       this.torpedoCount -= numberOfTorpedos;
       success = true;
     } else {
